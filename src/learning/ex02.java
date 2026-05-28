@@ -17,7 +17,7 @@ public class ex02 {
         System.out.print("Quantity in stock: ");
         product.quantity = leitor.nextInt();
 
-        System.out.println("hi");
+        System.out.println("hi!");
 
     }
 
