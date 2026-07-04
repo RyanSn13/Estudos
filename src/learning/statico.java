@@ -24,6 +24,6 @@ public class statico {
     }
     @Override
     public String toString(){
-        return "Cor: " + cor  + " | Modelo: " + modelo;
+        return "Cor: " + cor  + " | Modelo: " + modelo;//
     }
 }

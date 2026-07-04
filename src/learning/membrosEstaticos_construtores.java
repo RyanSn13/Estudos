@@ -19,6 +19,8 @@ public class membrosEstaticos_construtores {
         System.out.println(carro1.cor);
         System.out.println(carro2.cor);
         System.out.println(carro3.cor);
+
+        //
     }
 }
 
