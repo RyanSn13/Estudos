@@ -1,4 +1,4 @@
-package learning;
+package learning; //Construtores e membros estaticos 1
 
 public class membrosEstaticos_construtores {
 

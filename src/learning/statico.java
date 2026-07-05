@@ -1,4 +1,4 @@
-package learning;
+package learning; //try, construtores e membros estáticos 2
 /*
 public class statico {
     String nome;
