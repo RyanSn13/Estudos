@@ -20,6 +20,6 @@ public class vetor {
 
         double avg = sum / n;
 
-        System.out.println("Average: " + avg);
+        System.out.println("Average: " + avg); //
     }
 }
