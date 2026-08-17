@@ -1,41 +1,56 @@
 package learning;
 
-import learning.Account;
-
+import entities.Employee;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Program {
-    static void main() {
+    static void main(String[] args) {
         Scanner leitor = new Scanner(System.in);
 
-        System.out.println("Digite o número da conta: ");
-        int num = leitor.nextInt();
+        List<Employee> list = new ArrayList<>();
 
-        System.out.println("Digite o seu nome: ");
-        String nome = leitor.next();
+        System.out.print("Quantos empregados vão ser registrados?:  ");
+        int fun = leitor.nextInt();
 
-        Account conta = new Account(num, nome);
+        System.out.println("---------------------------");
 
-        System.out.println();
-        System.out.println("Dados da conta: ");
-        System.out.println(conta);
+        for (int i=0; i<fun; i++){
+            System.out.println("Employeer #" + i + ":");
 
-        System.out.println("Valor que deseja depositar: ");
-        double deposito = leitor.nextDouble();
-        conta.depositar(deposito);
+            System.out.print("Nome: \n");
+            String nome = leitor.next();
 
-        System.out.println();
-        System.out.println("Dados atualizados!: ");
-        System.out.println(conta);
+            System.out.print("Id: \n");
+            int Ide = leitor.nextInt();
 
-        System.out.println();
-        System.out.println("Quanto deseja sacar: ");
-        double saque = leitor.nextDouble();
-        conta.retirar(saque);
+            System.out.print("Salario: ");
+            double salario = leitor.nextDouble();
 
-        System.out.println();
-        System.out.println("Dados atualizados!: ");
-        System.out.println(conta);
+            list.add(new Employee(Ide, nome, salario));
+        }
 
+        System.out.println("Digite o empregado que vai ganhar aumento: ");
+        int id = leitor.nextInt();
+
+        Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        if (emp == null){
+            System.out.println("Id não encotrado!");
+        } else {
+            System.out.println("Digite a porcentagem: ");
+            double porcent = leitor.nextDouble();
+            emp.acrescimoSalario(porcent);
+        }
+
+        System.out.println("Listas dos Empregados");
+        for (Employee obj : list){
+            System.out.println(obj);
+        }
+        leitor.close();
+    }
+    public static boolean hasId(List<Employee> list, int id){
+        Employee emp = list.stream().filter(x -> x.getId() == id).findFirst().orElse(null);
+        return emp != null;
     }
 }
