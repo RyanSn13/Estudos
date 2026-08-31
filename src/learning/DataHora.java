@@ -32,7 +32,7 @@ public class DataHora {
 
         System.out.println("d06 = " + ftm3.format(d06));
 
-        System.out.println("----------------------------------");
+        System.out.println("----------------------------------");//
 
         System.out.println("r1 = " + r1);
         System.out.println("r2 = " + r2);

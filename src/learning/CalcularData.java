@@ -34,6 +34,6 @@ public class CalcularData {
         Duration t1 = Duration.between(pastWeekLocalDateTime, d05);
         Duration t2 = Duration.between(pastWeekLocalDateTime, d05);
         System.out.println("t2 days = " + t2.toDays());
-        System.out.println("t1 days = " + t1.toDays());
+        System.out.println("t1 days = " + t1.toDays());//
     }
 }
