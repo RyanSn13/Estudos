@@ -1,5 +1,6 @@
 package learning;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -29,5 +30,10 @@ public class CalcularData {
 
         System.out.println(pastWeekLocalInstant);
         System.out.println(nextWeekLocalInstant);
+
+        Duration t1 = Duration.between(pastWeekLocalDateTime, d05);
+        Duration t2 = Duration.between(pastWeekLocalDateTime, d05);
+        System.out.println("t2 days = " + t2.toDays());
+        System.out.println("t1 days = " + t1.toDays());
     }
 }
