@@ -30,7 +30,7 @@ public class Worker {
     }
 
     public WorkLevel getLevel() {
-        return level;
+        return level; //
     }
 
     public void setLevel(WorkLevel level) {

@@ -9,6 +9,6 @@ public class Enumeração {
 
         Order order = new Order(1080, new Date(), OrderStatus.PENDING_PAYMENT);
 
-        System.out.println(order);
+        System.out.println(order);//
     }
 }

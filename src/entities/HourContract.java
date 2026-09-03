@@ -33,7 +33,7 @@ public class HourContract {
     }
 
     public Integer getHours()  {
-        return hours;
+        return hours;//
     }
 
     public void setHours(Integer hours) {
